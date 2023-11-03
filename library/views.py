@@ -148,7 +148,7 @@ class UserRegistrationView(APIView):
             # Store OTP in sessions
             request.session['email'] = email
             request.session['otp'] = otp
-            # request.session.set_expiry(timedelta(minutes=1).seconds)
+            request.session.set_expiry(timedelta(minutes=1).seconds)
 
             user = CustomUser(email=email, is_active=False)
             user.set_password(password)
@@ -183,12 +183,8 @@ class OTPVerificationView(APIView):
 
         # Retrieve OTP from session
         stored_otp = request.session.get('otp')
-        email_send = request.session.get('email')
-        # import pdb
-        # pdb.set_trace()
-        print(email,otp)
-        print(stored_otp,email_send)
-        if otp == stored_otp and email == email_send:
+        
+        if otp == stored_otp:
             # OTP is correct, activate the user
             try:
                 user = CustomUser.objects.get(email=email)
@@ -219,10 +215,9 @@ class OTPResendView(APIView):
 
         request.session['email'] = email
         request.session['otp'] = otp
-        print(email,otp)
-        # request.session.set_expiry(timedelta(minutes=1).seconds)
+        request.session.set_expiry(timedelta(minutes=1).seconds)
 
-
+        
         try:
             subject = 'Welcome to our Meet and We are Heartly expecting your presents in organization'
             from_email = 'sivadeepkumar3@gmail.com'

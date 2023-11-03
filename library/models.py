@@ -73,7 +73,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     #         return user
     #     except Exception as e:
     #         print(f"An error occurred while sending email: {e}")
-
+    
     # def generate_otp(self):
     #     return ''.join([str(random.randint(0, 9)) for i in range(6)])
 
