@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block start %}
+<ul></ul>
+{% for i in borrow %}
+<li>{{request.user.username}} on this {{i.book}}  :  {{i.overdue_charge}}</li>
+
+{% endfor %}
+
+{% endblock %}

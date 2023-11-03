@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block start %}
+<div class="row justify-content-center my-5">
+    <div class="col-md-5">
+        <div class="mt-4 p-5 bg-success text-white rounded mb-3">
+            <h1>Weather Update App</h1>
+        </div>
+        <form action="." method="POST">
+          {% csrf_token %}
+          <div class="input-group">
+            <input type="text" required class="form-control" name="city" placeholder="Search City.......">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <hr>
+    </div>
+</div>
+
+
+{% endblock %}
