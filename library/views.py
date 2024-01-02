@@ -31,26 +31,26 @@ class Bookviewset(viewsets.ModelViewSet):
     serializer_class = BookSerializer 
 
     # authentication_classes = [TokenAuthentication] 
-    permission_classes = [CustomPermission]
+    # permission_classes = [CustomPermission]
 
 class Publisherviewset(viewsets.ModelViewSet):
     queryset = Publisher.objects.all()  
     serializer_class = PublisherSerializer 
 
     # authentication_classes = [TokenAuthentication] 
-    permission_classes = [CustomPermission]
+    # permission_classes = [CustomPermission]
 
 class PaymentSerializerviewset(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
-    permission_classes = [CustomPermission]
+    # permission_classes = [CustomPermission]
 
 class Borrowingviewset(viewsets.ModelViewSet):
     queryset = Borrowing.objects.all()
     serializer_class = BorrowingSerializer
 
     # authentication_classes = [TokenAuthentication] 
-    permission_classes = [CustomPermission]
+    # permission_classes = [CustomPermission]
 
     def get_queryset(self):
         user_id = self.request.user.id
@@ -108,7 +108,7 @@ def logout(request):
         print('Jwt Token is deleted')
     return HttpResponse('Deleted')
 
- 
+
 # views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response

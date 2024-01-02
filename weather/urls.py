@@ -9,5 +9,5 @@ urlpatterns = [
     path('',weather, name='weather'),
     path('encode/',encode_chunk,name='encode'),
     path('decode/',decode_chunk,name='decode'),
-    path('control_timer/', control_timer, name='control_timer'),
+    #path('control_timer/', control_timer, name='control_timer'),
 ]

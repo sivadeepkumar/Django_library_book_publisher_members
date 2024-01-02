@@ -1,0 +1,80 @@
+[33mcommit f3e84532609faabc3f427c9e54f17b59b07702bc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Tue Jan 2 14:56:05 2024 +0530
+
+    first commit
+
+[33mcommit 78322b10e08c9db8f6d3cf3243b7ff106caf5153[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: e8f8de5 c0c0bc7
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:32:05 2023 +0530
+
+    four commit
+
+[33mcommit e8f8de5f09ca1464ea1ef9efa88c274bae671870[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:30:05 2023 +0530
+
+    fourCommit
+
+[33mcommit c0c0bc70cca0c9813937c1bca527005199cbac85[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:19:31 2023 +0530
+
+    Revert "third -commit"
+    
+    This reverts commit e72cd61835362f8782c7ec151793a57d7e7fe533.
+
+[33mcommit e72cd61835362f8782c7ec151793a57d7e7fe533[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:18:24 2023 +0530
+
+    third -commit
+
+[33mcommit 3dd853e8a2dd7a597d6c5f54e2f488d15c785ccd[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:04:30 2023 +0530
+
+    second commit
+
+[33mcommit 3c7e16bad652279362d10fda944180be6e398f87[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:03:14 2023 +0530
+
+    first commit
+
+[33mcommit d7113c64c43c220927fb7585ee658aa9a96049ed[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 01:01:13 2023 +0530
+
+    second
+
+[33mcommit c680312e1518f4152423814a168368b97f5316a6[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 00:55:05 2023 +0530
+
+    first_commit
+
+[33mcommit 6947586be5df09540dd832afb8d21dc70711384d[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Sat Nov 4 00:54:02 2023 +0530
+
+    add.py
+
+[33mcommit 06966f2eec0c3cf1b4092ec70c3b2781a19fd2cc[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Fri Nov 3 19:16:20 2023 +0530
+
+    Newfile
+
+[33mcommit 6ede726a38b5cde461b8a704817b9bd7ae5d94aa[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Fri Nov 3 19:15:43 2023 +0530
+
+    first commit
+
+[33mcommit b582127d7cbf6b6c6df6a4da6e6e393354fa968e[m
+Author: sivadeepkumar <sivadeepkumar3@gmail.com>
+Date:   Fri Nov 3 19:09:05 2023 +0530
+
+    first commit

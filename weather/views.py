@@ -10,6 +10,7 @@ from rest_framework.decorators import api_view, authentication_classes
 from rest_framework_simplejwt.authentication import JWTAuthentication
 API_KEY = config('API_KEY')
 
+
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
 @csrf_exempt
@@ -103,68 +104,68 @@ def decode_chunk(request):
         return JsonResponse({'decoded_chars': decoded_chars})
 
 
-import schedule
-import time
-from django.http import JsonResponse
+# import schedule
+# import time
+# from django.http import JsonResponse
 
-# Define a variable to hold the scheduled job
-timer_job = None
-timer_value = 0
+# # Define a variable to hold the scheduled job
+# timer_job = None
+# timer_value = 0
 
-def start_timer():
-    global timer_job, timer_value  # Use the global variables
+# def start_timer():
+#     global timer_job, timer_value  # Use the global variables
     
-    if timer_job is None:
-        # Schedule the task to run every 30 minutes
-        timer_job = schedule.every(1).minutes.do(runtimmer)
-        timer_value = 0
-        print('Interval: STARTED')
-    else:
-        print('Interval already STARTED')
+#     if timer_job is None:
+#         # Schedule the task to run every 30 minutes
+#         timer_job = schedule.every(1).minutes.do(runtimmer)
+#         timer_value = 0
+#         print('Interval: STARTED')
+#     else:
+#         print('Interval already STARTED')
 
-def pause_timer(value):
-    global timer_value  # Use the global variable
+# def pause_timer(value):
+#     global timer_value  # Use the global variable
     
-    if timer_job is not None:
-        schedule.cancel_job(timer_job)
-        timer_value = value
-        print(f'Interval: PAUSED at {timer_value}')
-    else:
-        print('Interval is not STARTED')
+#     if timer_job is not None:
+#         schedule.cancel_job(timer_job)
+#         timer_value = value
+#         print(f'Interval: PAUSED at {timer_value}')
+#     else:
+#         print('Interval is not STARTED')
 
-def stop_timer():
-    global timer_job, timer_value  # Use the global variables
+# def stop_timer():
+#     global timer_job, timer_value  # Use the global variables
     
-    if timer_job is not None:
-        schedule.cancel_job(timer_job)
-        timer_job = None  # Reset the variable
-        timer_value = 0
-        print('Interval: STOPPED')
-    else:
-        print('Interval is not STARTED')
+#     if timer_job is not None:
+#         schedule.cancel_job(timer_job)
+#         timer_job = None  # Reset the variable
+#         timer_value = 0
+#         print('Interval: STOPPED')
+#     else:
+#         print('Interval is not STARTED')
 
-def runtimmer():
-    print(f'Timer: {timer_value}')
+# def runtimmer():
+#     print(f'Timer: {timer_value}')
 
-@csrf_exempt
-def control_timer(request):
-    global timer_value
+# @csrf_exempt
+# def control_timer(request):
+#     global timer_value
     
-    if request.method == 'POST':
-        body = json.loads(request.body.decode('utf-8'))
-        action = body.get('action')
-        value = body.get('value')
+#     if request.method == 'POST':
+#         body = json.loads(request.body.decode('utf-8'))
+#         action = body.get('action')
+#         value = body.get('value')
         
-        if action == 'startTimer':
-            start_timer()
-            return JsonResponse({'message': 'Timer started'})
-        elif action == 'pauseTimer':
-            pause_timer(value)
-            return JsonResponse({'message': f'Timer paused at {value}'})
-        elif action == 'stopTimer':
-            stop_timer()
-            return JsonResponse({'message': 'Timer stopped'})
-        else:
-            return JsonResponse({'error': 'Invalid action'}, status=400)
-    else:
-        return JsonResponse({'error': 'Invalid request method'}, status=405)    
+#         if action == 'startTimer':
+#             start_timer()
+#             return JsonResponse({'message': 'Timer started'})
+#         elif action == 'pauseTimer':
+#             pause_timer(value)
+#             return JsonResponse({'message': f'Timer paused at {value}'})
+#         elif action == 'stopTimer':
+#             stop_timer()
+#             return JsonResponse({'message': 'Timer stopped'})
+#         else:
+#             return JsonResponse({'error': 'Invalid action'}, status=400)
+#     else:
+#         return JsonResponse({'error': 'Invalid request method'}, status=405)    

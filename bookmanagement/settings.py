@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    "rest_framework.authtoken",
     'library',
     'products',
     'django_extensions',
@@ -139,12 +140,17 @@ BACKEND_DOMAIN = config("BACKEND_DOMAIN")
 PAYMENT_SUCCESS_URL = config("PAYMENT_SUCCESS_URL")
 PAYMENT_CANCEL_URL = config("PAYMENT_CANCEL_URL")
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-    'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#     'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ),
+# }
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.TokenAuthentication',
+#     ]
+# }
 
 
 # JWT TOKEN
